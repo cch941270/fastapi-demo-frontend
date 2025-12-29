@@ -1,10 +1,10 @@
 import {
   type DiscussionThreadType, DiscussionThread,
-} from "./components/DiscussionThread.tsx";
-import Header from "./components/Header.tsx";
+} from "./DiscussionThread.tsx";
+import Header from "./Header.tsx";
 import { useState, useEffect } from "react";
 
-function App() {
+export default function Home() {
   const [discussionThreads, setDiscussionThreads] = useState<
     DiscussionThreadType[]
   >([]);
@@ -36,5 +36,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

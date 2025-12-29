@@ -1,4 +1,5 @@
 import userCircle from "../assets/user-circle.svg";
+import { Link } from "react-router";
 
 export default function Header() {
   return (
@@ -6,8 +7,10 @@ export default function Header() {
       <div className="absolute w-full h-full flex justify-center items-center">
         FastAPI demo frontend
       </div>
-      <div className="h-full flex justify-end items-center">
-        <img className="w-[40px]" src={userCircle} />
+      <div className="relative h-full flex justify-end items-center">
+        <Link to="/login">
+          <img className="w-[40px]" src={userCircle} />
+        </Link>
       </div>
     </header>
   );
