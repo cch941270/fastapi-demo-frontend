@@ -16,8 +16,7 @@ export default function LoginForm() {
 
   useEffect(() => {
     if (token) {
-      localStorage.setItem("accessToken", token.access_token);
-      localStorage.setItem("tokenType", token.token_type);
+      localStorage.setItem("accessToken", JSON.stringify(token));
     }
   }, [token]);
 
