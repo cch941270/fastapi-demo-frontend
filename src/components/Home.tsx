@@ -30,7 +30,7 @@ export default function Home() {
   ));
 
   return (
-    <div className="max-w-[500px] mx-auto">
+    <div>
       <Header />
       {discussionThreadElements}
     </div>

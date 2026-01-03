@@ -12,3 +12,8 @@ textarea,
 select {
   font: inherit;
 }
+
+#root {
+  max-width: 500px;
+  margin-inline: auto;
+}
