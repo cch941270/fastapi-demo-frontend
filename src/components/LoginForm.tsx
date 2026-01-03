@@ -40,7 +40,7 @@ export default function LoginForm() {
   return (
     <>
       <form
-        className="form flex flex-col items-center py-[20px] mt-[5px] bg-lime-50"
+        className="form flex flex-col items-center pt-[20px] mt-[5px] bg-lime-50"
         action={getToken}
       >
         <label className="my-[5px]">
