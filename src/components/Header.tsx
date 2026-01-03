@@ -12,22 +12,20 @@ export default function Header() {
   }
 
   return (
-    <header className="sticky top-0 h-12 bg-amber-100">
-      <div className="absolute w-full h-full flex justify-center items-center">
-        FastAPI demo frontend
-      </div>
-      <div className="relative h-full flex justify-between items-center">
-        {tokenData ? (
-          <button className="cursor-pointer" onClick={logout}>
-            Logout
-          </button>
-        ) : (
-          <span></span>
-        )}
-        <Link to="/login">
-          <img className="w-[40px]" src={userCircle} />
-        </Link>
-      </div>
+    <header className="sticky top-0 h-12 flex justify-between items-center bg-amber-100">
+      {tokenData ? (
+        <button className="cursor-pointer w-[40px]" onClick={logout}>
+          Logout
+        </button>
+      ) : (
+        <span className="w-[40px]"></span>
+      )}
+      <Link to="/">
+        <span>FastAPI demo frontend</span>
+      </Link>
+      <Link to="/login">
+        <img className="w-[40px]" src={userCircle} />
+      </Link>
     </header>
   );
 }
