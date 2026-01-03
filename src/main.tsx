@@ -5,6 +5,7 @@ import "./index.css";
 import HomePage from "./pages/HomePage.tsx";
 import LoginPage from "./pages/LoginPage.tsx";
 import CreateAccountPage from "./pages/CreateAccountPage.tsx";
+import MyThreadsPage from "./pages/MyThreadsPage.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -13,6 +14,7 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/" element={<HomePage />} />
         <Route path="login" element={<LoginPage />} />
         <Route path="createAccount" element={<CreateAccountPage />} />
+        <Route path="myThreads" element={<MyThreadsPage />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

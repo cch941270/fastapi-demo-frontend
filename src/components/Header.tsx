@@ -23,7 +23,7 @@ export default function Header() {
       <Link to="/">
         <span>FastAPI demo frontend</span>
       </Link>
-      <Link to="/login">
+      <Link to={tokenData ? "/myThreads" : "/login"}>
         <img className="w-[40px]" src={userCircle} />
       </Link>
     </header>

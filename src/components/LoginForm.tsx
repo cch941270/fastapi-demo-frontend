@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 
-type AccessToken = {
+export type AccessToken = {
   access_token: string,
   token_type: string,
 }
