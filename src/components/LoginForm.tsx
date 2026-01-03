@@ -22,8 +22,8 @@ export default function LoginForm() {
   }, [token]);
 
   async function getToken(formData: FormData) {
-    const apiUrl = import.meta.env.VITE_API_URL;
-    const response = await fetch(`${apiUrl}/token/`, {
+    const baseApiUrl = import.meta.env.VITE_BASE_API_URL;
+    const response = await fetch(`${baseApiUrl}/token/`, {
       method: "POST",
       body: formData,
     });

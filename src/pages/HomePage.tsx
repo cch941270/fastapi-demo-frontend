@@ -8,12 +8,12 @@ import { useState, useEffect } from "react";
 export default function HomePage() {
   const [discussionThreads, setDiscussionThreads] =
     useState<DiscussionThreadType[]>([]);
-  const apiUrl = import.meta.env.VITE_API_URL;
+  const baseApiUrl = import.meta.env.VITE_BASE_API_URL;
 
   useEffect(() => {
     let ignore = false;
     async function startFetching() {
-      const response = await fetch(`${apiUrl}/discussion_threads/`);
+      const response = await fetch(`${baseApiUrl}/discussion_threads/`);
       const data = await response.json();
       if (!ignore) {
         setDiscussionThreads(data);

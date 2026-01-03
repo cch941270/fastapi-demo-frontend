@@ -15,9 +15,9 @@ export function DiscussionThread({
 }: {
   discussionThread: DiscussionThreadType;
 }) {
-  const apiUrl = import.meta.env.VITE_API_URL;
+  const baseApiUrl = import.meta.env.VITE_BASE_API_URL;
   const imageSrc = discussionThread.imagePath
-    ? `${apiUrl}${discussionThread.imagePath}`
+    ? `${baseApiUrl}${discussionThread.imagePath}`
     : imagePicture;
   const createdAt = new Date(discussionThread.createdAt).toLocaleString();
 
