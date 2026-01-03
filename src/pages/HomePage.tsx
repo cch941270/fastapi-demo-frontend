@@ -1,13 +1,13 @@
 import {
-  type DiscussionThreadType, DiscussionThread,
-} from "./DiscussionThread.tsx";
-import Header from "./Header.tsx";
+  type DiscussionThreadType,
+  DiscussionThread,
+} from "../components/DiscussionThread.tsx";
+import Header from "../components/Header.tsx";
 import { useState, useEffect } from "react";
 
-export default function Home() {
-  const [discussionThreads, setDiscussionThreads] = useState<
-    DiscussionThreadType[]
-  >([]);
+export default function HomePage() {
+  const [discussionThreads, setDiscussionThreads] =
+    useState<DiscussionThreadType[]>([]);
   const apiUrl = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
