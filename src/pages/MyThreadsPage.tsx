@@ -1,19 +1,19 @@
-import DiscussionThread from "../components/DiscussionThread.tsx";
-import { type AccessToken, type DiscussionThreadProps } from "../types/types.tsx";
-import Header from "../components/Header";
 import { useState, useEffect } from "react";
+import DiscussionThread from "../components/DiscussionThread.tsx";
+import { type DiscussionThreadProps } from "../types/types.tsx";
+import Header from "../components/Header";
+import { getToken } from "../utils/utils.tsx";
 
 export default function MyThreadsPage() {
   const [myDiscussionThreads, setMyDiscussionThreads] =
     useState<DiscussionThreadProps[]>([]);
   const baseApiUrl = import.meta.env.VITE_BASE_API_URL;
-  const tokenData = localStorage.getItem("accessToken");
 
   useEffect(() => {
-    if (tokenData) {
-      const token: AccessToken = JSON.parse(tokenData);
+    const token = getToken();
+    if (token) {
       let ignore = false;
-      async function startFetching() {
+      const startFetching = async () => {
         const response = await fetch(`${baseApiUrl}/user/discussion_threads/`, {
           headers: {
             Authorization: `${token.token_type} ${token.access_token}`,
