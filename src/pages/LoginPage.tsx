@@ -7,7 +7,7 @@ export default function LoginPage() {
     <>
       <Header />
       <LoginForm />
-      <Link to="/createAccount">
+      <Link to="/account/create">
         <div className="text-center pb-[20px] bg-lime-50">Create Account</div>
       </Link>
     </>

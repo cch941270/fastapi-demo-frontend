@@ -13,7 +13,7 @@ createRoot(document.getElementById("root")!).render(
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="login" element={<LoginPage />} />
-        <Route path="createAccount" element={<CreateAccountPage />} />
+        <Route path="account/create" element={<CreateAccountPage />} />
         <Route path="myThreads" element={<MyThreadsPage />} />
       </Routes>
     </BrowserRouter>
