@@ -8,6 +8,7 @@ import CreateAccountPage from "./pages/CreateAccountPage.tsx";
 import MyThreadsPage from "./pages/MyThreadsPage.tsx";
 import CreateDiscussionThreadPage from "./pages/CreateDiscussionThreadPage.tsx";
 import UpdateDiscussionThreadPage from "./pages/UpdateDiscussionThreadPage.tsx";
+import DeleteDiscussionThreadPage from "./pages/DeleteDiscussionThreadPage.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -20,6 +21,7 @@ createRoot(document.getElementById("root")!).render(
         <Route path="threads">
           <Route path="create" element={<CreateDiscussionThreadPage />} />
           <Route path=":id/update" element={<UpdateDiscussionThreadPage />} />
+          <Route path=":id/delete" element={<DeleteDiscussionThreadPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
