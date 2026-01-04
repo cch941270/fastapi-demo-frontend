@@ -1,14 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
-
-export type AccessToken = {
-  access_token: string,
-  token_type: string,
-}
-
-type fetchError = {
-  detail: string
-}
+import { type AccessToken, type FetchError } from "../types/types";
 
 export default function LoginForm() {
   const [token, setToken] = useState<AccessToken | null>(null);
@@ -31,7 +23,7 @@ export default function LoginForm() {
       setToken(accessToken);
       navigate("/");
     } else {
-      const error: fetchError = await response.json();
+      const error: FetchError = await response.json();
       alert(error.detail)
     }
   }

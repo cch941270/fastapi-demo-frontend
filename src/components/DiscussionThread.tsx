@@ -1,19 +1,10 @@
 import imagePicture from "../assets/image-picture.svg";
+import { type DiscussionThreadProps } from "../types/types";
 
-export type DiscussionThreadType = {
-  id: number;
-  title: string;
-  content: string;
-  author: string;
-  imagePath: string | null;
-  createdAt: Date;
-  updatedAt: Date | null;
-};
-
-export function DiscussionThread({
+export default function DiscussionThread({
   discussionThread,
 }: {
-  discussionThread: DiscussionThreadType;
+  discussionThread: DiscussionThreadProps;
 }) {
   const baseApiUrl = import.meta.env.VITE_BASE_API_URL;
   const imageSrc = discussionThread.imagePath

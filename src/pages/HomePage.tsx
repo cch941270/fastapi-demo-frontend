@@ -1,13 +1,11 @@
-import {
-  type DiscussionThreadType,
-  DiscussionThread,
-} from "../components/DiscussionThread.tsx";
+import DiscussionThread from "../components/DiscussionThread.tsx";
+import { type DiscussionThreadProps } from "../types/types.tsx";
 import Header from "../components/Header.tsx";
 import { useState, useEffect, type ChangeEvent } from "react";
 
 export default function HomePage() {
   const [discussionThreads, setDiscussionThreads] =
-    useState<DiscussionThreadType[]>([]);
+    useState<DiscussionThreadProps[]>([]);
   const [titleFilter, setTitleFilter] = useState<string>("");
   const baseApiUrl = import.meta.env.VITE_BASE_API_URL;
 

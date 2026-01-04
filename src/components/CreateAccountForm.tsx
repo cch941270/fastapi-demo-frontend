@@ -1,8 +1,5 @@
 import { useNavigate } from "react-router";
-
-type fetchError = {
-  detail: string
-}
+import { type FetchError } from "../types/types";
 
 export default function CreateAccountForm() {
   let navigate = useNavigate();
@@ -17,7 +14,7 @@ export default function CreateAccountForm() {
       alert("Account created!")
       navigate("/login");
     } else {
-      const error: fetchError = await response.json();
+      const error: FetchError = await response.json();
       alert(error.detail)
     }
   }

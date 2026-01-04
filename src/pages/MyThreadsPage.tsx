@@ -1,14 +1,11 @@
-import {
-  type DiscussionThreadType,
-  DiscussionThread,
-} from "../components/DiscussionThread.tsx";
-import { type AccessToken } from "../components/LoginForm.tsx";
+import DiscussionThread from "../components/DiscussionThread.tsx";
+import { type AccessToken, type DiscussionThreadProps } from "../types/types.tsx";
 import Header from "../components/Header";
 import { useState, useEffect } from "react";
 
 export default function MyThreadsPage() {
   const [myDiscussionThreads, setMyDiscussionThreads] =
-    useState<DiscussionThreadType[]>([]);
+    useState<DiscussionThreadProps[]>([]);
   const baseApiUrl = import.meta.env.VITE_BASE_API_URL;
   const tokenData = localStorage.getItem("accessToken");
 
