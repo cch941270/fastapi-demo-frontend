@@ -7,6 +7,7 @@ import LoginPage from "./pages/LoginPage.tsx";
 import CreateAccountPage from "./pages/CreateAccountPage.tsx";
 import MyThreadsPage from "./pages/MyThreadsPage.tsx";
 import CreateDiscussionThreadPage from "./pages/CreateDiscussionThreadPage.tsx";
+import UpdateDiscussionThreadPage from "./pages/UpdateDiscussionThreadPage.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -18,6 +19,7 @@ createRoot(document.getElementById("root")!).render(
         <Route path="myThreads" element={<MyThreadsPage />} />
         <Route path="threads">
           <Route path="create" element={<CreateDiscussionThreadPage />} />
+          <Route path=":id/update" element={<UpdateDiscussionThreadPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
