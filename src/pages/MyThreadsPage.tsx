@@ -41,6 +41,9 @@ export default function MyThreadsPage() {
   return (
     <>
       <Header />
+      <h3 className="h-10 flex justify-center items-center mt-[5px] bg-lime-100">
+        My Threads
+      </h3>
       {discussionThreadElements}
     </>
   );
