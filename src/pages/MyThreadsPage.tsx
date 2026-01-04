@@ -32,7 +32,7 @@ export default function MyThreadsPage() {
   }, []);
 
   const discussionThreadElements = myDiscussionThreads.map((d) => (
-    <DiscussionThread key={d.id} discussionThread={d} />
+    <DiscussionThread key={d.id} discussionThread={d} isMyThread={true} />
   ));
 
   return (
