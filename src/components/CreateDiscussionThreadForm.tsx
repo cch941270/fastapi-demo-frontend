@@ -18,7 +18,7 @@ export default function CreateDiscussionThreadForm() {
       });
       if (response.ok) {
         alert("Thread created!")
-        navigate("/");
+        navigate("/myThreads");
       } else {
         const error: FetchError = await response.json();
         alert(error.detail)
