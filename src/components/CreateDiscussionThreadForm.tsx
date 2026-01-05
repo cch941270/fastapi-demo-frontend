@@ -34,7 +34,11 @@ export default function CreateDiscussionThreadForm() {
       </div>
       <div className="flex flex-col my-[5px]">
         <label htmlFor="content">Content:</label>
-        <textarea name="content" rows={5} cols={20} required />
+        <textarea name="content" rows={5} required />
+      </div>
+      <div className="flex flex-col my-[5px]">
+        <label htmlFor="image">Image(Optional):</label>
+        <input type="file" name="image" className="border border-emerald-200" />
       </div>
       <button className="my-[5px]">Submit</button>
     </form>
